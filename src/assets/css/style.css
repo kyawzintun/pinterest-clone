@@ -1,0 +1,27 @@
+.m-popup,
+.info-popup {
+  color: #555 !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.m-popup .item,
+.info-popup .item {
+  line-height: 30px;
+  margin: 0px !important;
+}
+
+.info-popup ._item:hover,
+.m-popup .item:hover {
+  background-color: rgb(239, 239, 239) !important;
+}
+
+.m-popup .item:first-child,
+.info-popup .item:first-child,
+.info-popup .item:nth-child(2) {
+  border-bottom: 1px solid rgb(239, 239, 239) !important;
+}
+
+.m-popup .item:last-child {
+  border-top: 1px solid rgb(239, 239, 239) !important;
+}
