@@ -3,7 +3,7 @@ import { Image, Menu, Header, Label, Popup} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import SearchInput from '../search/search';
-import MenuPopup from '../common/menu-popup';
+import MenuPopup from '../popup/menu-popup';
 import "./navbar.css";
 import logo from '../../assets/images/pinterest-logo.png';
 import user from '../../assets/images/user.jpg';

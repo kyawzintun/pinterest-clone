@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Image, Popup, Button, Icon } from 'semantic-ui-react';
+import { Image, Popup } from 'semantic-ui-react';
 import sizeMe from 'react-sizeme';
 import StackGrid, { transitions, easings } from 'react-stack-grid';
 
-import MoreInfoPopup from '../common/more-info-popup';
+import HoverContent from '../common/hover-content';
+import MoreInfoPopup from '../popup/more-info-popup';
 import InfoButton from '../button/info-button';
 import "./grid.css";
 const transition = transitions.scaleDown;
@@ -15,17 +16,7 @@ class GridImage extends Component {
         <div key={i} className="_grid">
           <div className="_img-g">
             <Image className="_img" size="large" src={require(`../../assets/images/photos/${i+1}.jpg`)} />
-            <div className="_hover-content">
-              <div className="_btn-group">
-                <Button icon floated='left'>
-                  <Icon name='upload' />
-                </Button>
-                <Button icon floated='right' color='red'>
-                  <Icon name='pin' /> Save
-                </Button>
-              </div>
-              <div className="_text">uploaded by instagram</div>
-            </div>
+            <HoverContent />
           </div>
           <span className="_b-dot">
             <Popup

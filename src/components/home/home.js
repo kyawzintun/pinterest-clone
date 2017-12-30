@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'semantic-ui-react';
 // import axios from 'axios';
 
-import GridImage from '../common/grid';
+import GridImage from '../wall/grid';
 import NavBar from '../navbar/navbar';
 import './home.css';
 

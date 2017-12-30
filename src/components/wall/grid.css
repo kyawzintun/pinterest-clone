@@ -19,10 +19,6 @@
   padding: 0 4px;
 }
 
-._i-popup {
-  padding: 0px !important;
-}
-
 ._img {
   opacity: 1;
   display: block;
@@ -55,15 +51,4 @@
 
 ._img-g:hover ._hover-content {
   opacity: 1;
-}
-
-._btn-group {
-  clear: both;
-}
-
-._text {
-  color: white;
-  font-size: 16px;
-  position: absolute;
-  bottom: 50px;
 }
