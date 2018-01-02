@@ -31,8 +31,8 @@
 }
 
 .search-input input,
-.search-user-input input {
-  background-color: #efefef !important;
+.search-user-input input,
+._input {
   color: #555 !important;
   font-size: 16px !important;
   font-weight: 600 !important;
@@ -43,9 +43,15 @@
 }
 
 .search-input input:focus,
-.search-user-input input:focus {
+.search-user-input input:focus,
+._input:focus {
   outline: none !important;
   border: 0px !important;
+}
+
+.search-input input,
+.search-user-input input{
+  background-color: #efefef !important;
 }
 
 .f-size-16 {
@@ -58,6 +64,10 @@
 
 .color-555 {
   color: #555;
+}
+
+.color-181 {
+  color: rgb(181, 181, 181) !important;
 }
 
 .l-height-18 {

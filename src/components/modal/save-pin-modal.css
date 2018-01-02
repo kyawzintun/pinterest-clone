@@ -89,3 +89,17 @@
   line-height: 3;
   margin-bottom: 10px;
 }
+
+.pin-save-btn {
+  margin-top: -7px !important;
+  opacity: 0;
+}
+
+.pin-post:hover .pin-save-btn {
+  opacity: 1;
+}
+
+.pin-img-wrap {
+  margin-left: 20% !important;
+  margin-top: 30% !important;
+}
