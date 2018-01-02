@@ -12,10 +12,15 @@ class SavePinModal extends Component {
       isCreateBoard: false
     }
   }
+
+  handleBoard = () => {
+    this.setState({isCreateBoard: !this.state.isCreateBoard });
+  };
+
   render() {
     const isCreateBoard = this.state.isCreateBoard;
     return (
-      <Modal size="small" className="pin-modal" open={this.props.modalOpen} onClose={this.props.handleClose}>
+      <Modal size="small" className="pin-modal" open={this.props.modalOpen}>
         <Modal.Content className="pin-modal-content">
           <Grid columns='equal' className="pin-grid-wrapper">
             <Grid.Row>
@@ -31,10 +36,10 @@ class SavePinModal extends Component {
               <Grid.Column className="pin-grid-2">
                 <Segment className="pin-segment">
                   {!isCreateBoard &&
-                    <ChooseBoard />
+                    <ChooseBoard closeModal={this.props.handleClose} handleBoard={this.handleBoard} />
                   }
                   {isCreateBoard &&
-                    <CreateBoard />
+                    <CreateBoard closeModal={this.props.handleClose} handleBoard={this.handleBoard} />
                   }
                 </Segment>
               </Grid.Column>

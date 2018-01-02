@@ -8,7 +8,7 @@ class CreateBoard extends Component {
       <div>
         <div className="pin-head padd-1">
           <div className="_heading">Create board</div>
-          <div className="_close"><Icon name="close" /></div>
+          <div className="_close"><Icon onClick={this.props.closeModal} className="c-pointer" name="close" /></div>
         </div>
         <Form>
           <div className="padd-1">
@@ -34,7 +34,7 @@ class CreateBoard extends Component {
             <Divider />
             <div className="padd-1">
               <Button floated='right' color="red">Create</Button>
-              <Button floated='left'>Cancel</Button>
+              <Button floated='left' onClick={this.props.handleBoard}>Cancel</Button>
             </div>
           </div>
         </Form>
