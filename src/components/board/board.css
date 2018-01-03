@@ -1,0 +1,109 @@
+.profile-header-wrapper {
+  margin: 100px auto 0px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.left-pane {
+  width: 75%;
+}
+
+.padd-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+.f-wrap {
+  width: 100%;
+  clear: both;
+}
+
+.f-left {
+  width: 50%;
+  float: left;
+}
+
+.f-right {
+  width: 50%;
+  float: right;
+}
+
+.cardboard-wrapper {
+  display: block;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  flex: wrap;
+}
+
+.item-0 {
+  position: relative;
+  left: 15%;
+}
+
+.link-image-wrapper{
+  width: 301px;
+}
+
+.link-image-wrapper:before {
+    background: #555;
+    border-radius: 8px;
+    content: " " !important;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+    width: 100%;
+    z-index: 3;
+    margin: -10px;
+    padding: 10px;
+} 
+
+.create-link-btn {
+  background: transparent;
+  border: 0;
+}
+
+.create-link-btn:hover {
+  outline: #d1d1d1 auto 1px !important;
+}
+
+.card-0 {
+  width: 301px;
+  height: 200px;
+  border-radius: 8px;
+  background-color: #efefef;
+}
+
+.plus-btn {
+  position: relative;
+  top: 45%;
+}
+
+.p-top-bottom-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+@media (min-width: 1312px) {
+  .user-name {
+    font-size: 48px !important;
+    line-height: 56px !important;
+    word-spacing: -2.75px !important;
+  }
+}
+
+@media (min-width: 576px) .user-name {
+  font-size: 36px;
+  letter-spacing: -1.25px;
+  line-height: 42px;
+  word-spacing: -2.25px;
+}

@@ -38,7 +38,7 @@ class Home extends Component {
                         <Icon name='facebook' /> Continue with Facebook
                       </Button>
                       <Button color='google plus' fluid>
-                        <Icon name='google plus' /> Continue with Google
+                        <Icon name='google' /> Continue with Google
                       </Button>
                     </div>
                     <div className="div-id-9">

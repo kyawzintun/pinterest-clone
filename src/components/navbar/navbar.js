@@ -29,7 +29,7 @@ class NavBar extends Component {
           </Label>
         </Menu.Item>
         <Menu.Item className="menu-item">
-          <Label as='a' href="/">
+          <Label as='a' href="/123/boards">
             <Image avatar spaced='right' src={user} />
             Kyaw
           </Label>
