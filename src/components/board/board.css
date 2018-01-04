@@ -35,6 +35,7 @@
 .cardboard-wrapper {
   display: block;
   margin-top: 50px;
+  margin-bottom: 50px;
   position: relative;
   display: flex;
   flex: wrap;
@@ -85,7 +86,9 @@
 
 .plus-btn {
   position: relative;
-  top: 45%;
+  top: 40%;
+  left: 45%;
+  width: 50px;
 }
 
 .p-top-bottom-12 {

@@ -32,7 +32,7 @@ class Home extends Component {
                       </Form.Field>
                       <Button color="red" fluid>Continue</Button>
                     </Form>
-                    <p class="p-or">OR</p>
+                    <p className="p-or">OR</p>
                     <div className="div-id-8">
                       <Button color='facebook' fluid>
                         <Icon name='facebook' /> Continue with Facebook

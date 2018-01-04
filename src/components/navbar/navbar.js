@@ -24,7 +24,7 @@ class NavBar extends Component {
           <SearchInput />
         </Menu.Item>
         <Menu.Item className="menu-item">
-          <Label as='a' href="/">
+          <Label as='a' href="/explore">
             <Header as='h3' className="item_1">Home</Header>
           </Label>
         </Menu.Item>
