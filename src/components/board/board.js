@@ -32,12 +32,12 @@ class Profile extends Component {
                   <Header as='h2' className="user-name color-555">Kyaw Zin Tun</Header>
                   <div className="f-wrap">
                     <div className="f-left c-pointer">
-                      <div className="color-555">500</div>
+                      <div className="color-555">0</div>
                       <div className="color-b5">Followers</div>
                     </div>
 
                     <div className="f-right c-pointer">
-                      <div className="color-555">500</div>
+                      <div className="color-555">0</div>
                       <div className="color-b5">Following</div>
                     </div>
                   </div>
@@ -54,9 +54,9 @@ class Profile extends Component {
             <div className="item-0">
               <div className="link-image-wrapper">
                 <div className="create-link-btn p0 c-pointer">
-                  <div className="card-0">
+                  <div className="card-0" onClick={this.handleOpen}>
                     <div className="plus-btn">
-                      <Button circular icon='plus' color="red" onClick={this.handleOpen}/>
+                      <Button circular icon='plus' color="red" />
                     </div>
                   </div>
                   <div className="p-top-bottom-12">
