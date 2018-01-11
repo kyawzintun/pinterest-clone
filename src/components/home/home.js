@@ -8,7 +8,7 @@ import "./home.css";
 
 class Home extends Component {
   render() {
-    if (isLoggedIn()) {
+    if (!isLoggedIn()) {
       return (<Redirect to="/explore" />);
     }
     return (

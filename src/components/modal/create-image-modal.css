@@ -21,3 +21,8 @@
 .close-icon img {
   vertical-align: middle;
 }
+
+.modal-action-btn {
+  margin: 15px 0px 10px;
+  min-height: 25px;
+}
