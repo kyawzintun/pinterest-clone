@@ -44,6 +44,9 @@ class CreateImageModal extends Component {
       this.setState({ [nameErr]: `${name} is required.` });
     } else if ((name === 'url' || name === 'website') && value.length < 6) {
       this.setState({ [nameErr]: `${name} must be 6 characters or more.` });
+    } else if(name === 'url') {
+      const isValid = /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/i.test(value);
+      if (!isValid) this.setState({ [nameErr]: "Please enter a valid image url." });
     }
   }
 
@@ -78,7 +81,8 @@ class CreateImageModal extends Component {
       headers: reqHeader,
       data: imageObj
     }).then(function (res) {
-      _this.setState({ submitted: false });
+      _this.setState({ submitted: false, url: '', website: '', description: '' });
+      _this.props.handleClose();
       console.log('image create success ', res);
     }).catch(err => {
       _this.setState({ submitted: false });
