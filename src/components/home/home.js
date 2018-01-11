@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { Form, Button, Icon } from 'semantic-ui-react';
-import "./home.css";
+import isLoggedIn from '../helper/isLoggedIn';
+import FacebookButton from "../button/fb-button";
 import logo from "../../assets/images/logo.svg"
+import "./home.css";
 
 class Home extends Component {
-  state = {  }
   render() {
+    if (isLoggedIn()) {
+      return (<Redirect to="/explore" />);
+    }
     return (
       <div className="home-root">
         <div className="bg-image"></div>
@@ -16,7 +21,7 @@ class Home extends Component {
             <div>
               <div className="div-id-3">
                 <div className="div-id-4">
-                  <img src= {logo} />
+                  <img src= {logo} alt="pinterest logo" />
                 </div>
                 <div>
                   <div className="div-id-5">Welcome to Pinterest</div>
@@ -34,18 +39,16 @@ class Home extends Component {
                     </Form>
                     <p className="p-or">OR</p>
                     <div className="div-id-8">
-                      <Button color='facebook' fluid>
-                        <Icon name='facebook' /> Continue with Facebook
-                      </Button>
-                      <Button color='google plus' fluid>
+                      <FacebookButton />
+                      <Button onClick={this.handleFBLogout} color='google plus' fluid>
                         <Icon name='google' /> Continue with Google
                       </Button>
                     </div>
                     <div className="div-id-9">
                       <span className="span-id-1">
                         <span>By continuing, you agree to Pinterest's  
-                          <a href="#" target="_blank"> Terms of Service</a>, 
-                          <a href="#" target="_blank"> Privacy Policy</a>
+                          <a href="/" target="_blank"> Terms of Service</a>, 
+                          <a href="/" target="_blank"> Privacy Policy</a>
                         </span>
                       </span>
                     </div>

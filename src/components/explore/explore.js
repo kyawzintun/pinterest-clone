@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Container } from 'semantic-ui-react';
+import { Redirect } from 'react-router-dom';
 // import axios from 'axios';
 
+import isLoggedIn from '../helper/isLoggedIn';
 import GridImage from '../wall/grid';
 import NavBar from '../navbar/navbar';
 import './explore.css';
@@ -11,6 +13,9 @@ const images = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
 
 class Explore extends Component {
   render() {
+    if (!isLoggedIn()) {
+      return (<Redirect to="/" />);
+    }
     return (
       <div className='App' >
         <NavBar />

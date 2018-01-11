@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Explore from './components/explore/explore';
 import Home from './components/home/home';

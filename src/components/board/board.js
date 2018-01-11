@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Grid, Segment, Header, Button } from 'semantic-ui-react';
+import { Redirect } from 'react-router-dom';
+
 import NavBar from "../navbar/navbar";
 import GridImage from '../wall/grid';
 import CreateImageModal from '../modal/create-image-modal';
+import isLoggedIn from '../helper/isLoggedIn';
 import "./board.css";
 
 const square = { width: 175, height: 175 }
@@ -21,6 +24,9 @@ class Profile extends Component {
   handleClose = () => this.setState({ modalOpen: false });
 
   render() {
+    if (!isLoggedIn()) {
+      return (<Redirect to="/" />);
+    }
     return (
       <div className="board-root">
         <NavBar />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, Header, Form } from 'semantic-ui-react'
+import { Button, Modal, Form } from 'semantic-ui-react'
 import closeIcon from '../../assets/images/close.svg';
 import "./create-image-modal.css";
 
@@ -12,7 +12,7 @@ class CreateImageModal extends Component {
           Create Pin 
           <div className="close-icon-wrap c-pointer border-0">
             <div className="close-icon">
-              <img src={closeIcon} onClick={this.props.handleClose}/>
+              <img src={closeIcon} onClick={this.props.handleClose} alt="close icon"/>
             </div>
           </div>
         </Modal.Header>

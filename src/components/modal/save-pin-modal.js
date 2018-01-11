@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Image, Modal, Grid, Segment, Icon, Header, Divider } from 'semantic-ui-react'
+import { Image, Modal, Grid, Segment } from 'semantic-ui-react'
 
 import ChooseBoard from "../choose-board/choose-board";
 import CreateBoard from "../create-board/create-board";
