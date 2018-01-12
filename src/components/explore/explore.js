@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react';
+import { Container, Image } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import store from 'store';
@@ -7,6 +7,7 @@ import store from 'store';
 import isLoggedIn from '../helper/isLoggedIn';
 import GridImage from '../wall/grid';
 import NavBar from '../navbar/navbar';
+import loading from '../../assets/images/loading.svg';
 import './explore.css';
 
 const baseUrl = process.env.REACT_APP_API_URL;
@@ -45,7 +46,12 @@ class Explore extends Component {
       <div className='App' >
         <NavBar />
         <Container fluid className="h-container">
-          <GridImage images={this.state.images} />
+          {this.state.loading &&
+            <div className="loading-wrapper"><Image className="loading-svg" src={loading} /></div>
+          }
+          {!this.state.loading &&
+            <GridImage images={this.state.images} />
+          }
         </Container>
       </div>
     );

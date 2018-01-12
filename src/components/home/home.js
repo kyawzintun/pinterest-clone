@@ -55,6 +55,11 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
+
+              <a href="/explore" className="home-link">
+                <button className="home-button" type="button">Home</button>
+              </a>
+
             </div>
           </div>
         </div>

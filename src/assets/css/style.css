@@ -115,3 +115,12 @@
 .border-0 {
   border: 0;
 }
+
+.loading-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.loading-wrapper .loading-svg {
+  margin: 0 auto;
+}

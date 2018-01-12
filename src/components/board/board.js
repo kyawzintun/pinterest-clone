@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Segment, Header, Button } from 'semantic-ui-react';
+import { Container, Grid, Segment, Header, Button, Image } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import store from 'store';
@@ -9,6 +9,7 @@ import NavBar from "../navbar/navbar";
 import GridImage from '../wall/grid';
 import CreateImageModal from '../modal/create-image-modal';
 import isLoggedIn from '../helper/isLoggedIn';
+import loading from '../../assets/images/loading.svg';
 import "./board.css";
 
 const baseUrl = process.env.REACT_APP_API_URL;
@@ -104,7 +105,12 @@ class Profile extends Component {
             </div>
           </div>
         </Container>
-        <GridImage images={this.state.images} />
+        {this.state.loading &&
+          <div className="loading-wrapper"><Image className="loading-svg" src={loading} /></div>
+        }
+        {!this.state.loading && 
+          <GridImage images={this.state.images} />
+        }
         <CreateImageModal modalOpen={this.state.modalOpen} handleClose={this.handleClose} handleStateChange={this.handleStateChange} />
         <ToastContainer
           position="top-right"

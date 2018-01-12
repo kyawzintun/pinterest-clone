@@ -124,3 +124,37 @@
   font-weight: bold !important;
   text-decoration: none !important;
 }
+
+.home-link {
+  display: block;
+}
+
+.home-link,
+.home-link:active,
+.home-link:visited {
+  text-decoration: none;
+}
+
+.home-button {
+  border:0px;
+  height:36px;
+  display:inline-block;
+  border-radius:4px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:0 43px;
+  font-size:15px;
+  font-weight:bold;
+  outline:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  cursor:pointer;
+  margin-top:10px;
+  vertical-align:middle;
+  text-align:center;
+  background-color:#ebebeb;
+  color:#444;
+  position:absolute;
+  right:25px;
+  top:15px;
+}
