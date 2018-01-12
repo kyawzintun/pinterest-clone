@@ -28,8 +28,8 @@ class GridImage extends Component {
       return (
         <div key={i} className="_grid">
           <div className="_img-g" onClick={this.handleOpen}>
-            <Image className="_img" size="large" src={require(`../../assets/images/photos/${i+1}.jpg`)} />
-            <HoverContent />
+            <Image className="_img" size="large" src={image.url} />
+            <HoverContent image={image}/>
           </div>
           <span className="_b-dot">
             <Popup
@@ -40,7 +40,7 @@ class GridImage extends Component {
               className="_i-popup"
             />
           </span>
-          <ViewImageModal modalOpen={this.state.modalOpen} handleClose={this.handleClose} />
+          {/* <ViewImageModal modalOpen={this.state.modalOpen} handleClose={this.handleClose} /> */}
         </div>
       );
     });

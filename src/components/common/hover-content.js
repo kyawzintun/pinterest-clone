@@ -36,8 +36,8 @@ class HoverContent extends Component {
             <Icon name='pin' /> Save
           </Button>
         </div>
-        <div className="_text">uploaded by instagram</div>
-        <SavePinModal modalOpen={this.state.modalOpen} handleClose={this.handleClose}/>
+        <div className="_text">uploaded by {this.props.image.username}</div>
+        <SavePinModal modalOpen={this.state.modalOpen} handleClose={this.handleClose} image={this.props.image}/>
       </div>
     );
   }

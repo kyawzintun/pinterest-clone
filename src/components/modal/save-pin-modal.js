@@ -27,9 +27,10 @@ class SavePinModal extends Component {
               <Grid.Column className="_35 _2v pin-grid">
                 <Segment className="pin-segment _2v pin-img-wrap">
                   <div className="pin-img">
-                    <Image className="_img" size="large" src={require(`../../assets/images/photos/11.jpg`)} />
+                    <Image className="_img" size="large" src={this.props.image.url} />
                   </div>
                   <div className="pin-meta">
+                    <span>{this.props.image.description}</span>
                   </div>
                 </Segment>
               </Grid.Column>

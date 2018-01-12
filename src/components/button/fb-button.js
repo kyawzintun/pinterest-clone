@@ -62,7 +62,7 @@ class FacebookButton extends Component {
   callApi = () => {
     const _this = this;
     FB.api('/me', {
-      fields: "id, email, name"
+      fields: "id, email, name, picture"
     }, function (res) {
       console.log(res);
       _this.createUser(res);

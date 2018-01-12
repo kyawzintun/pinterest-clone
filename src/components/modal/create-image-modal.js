@@ -74,7 +74,6 @@ class CreateImageModal extends Component {
   createImage = (imageObj) => {
     const _this = this;
     this.setState({ submitted: true });
-    console.log('image object ', imageObj);
     axios({
       method: 'post',
       url: baseUrl + 'image/create',
@@ -83,7 +82,7 @@ class CreateImageModal extends Component {
     }).then(function (res) {
       _this.setState({ submitted: false, url: '', website: '', description: '' });
       _this.props.handleClose();
-      console.log('image create success ', res);
+      _this.props.handleStateChange(res.data);
     }).catch(err => {
       _this.setState({ submitted: false });
       console.log('image create error ', err.response);
@@ -131,7 +130,7 @@ class CreateImageModal extends Component {
                 <input
                   onChange={this.handleChange}
                   name="website"
-                  value={this.state.website}
+                  value="pinterest.com"
                   minLength={6}
                   maxLength={50}
                   autoComplete='off'
@@ -150,7 +149,7 @@ class CreateImageModal extends Component {
                   name="description"
                   value={this.state.description}
                   minLength={5}
-                  maxLength={50}
+                  maxLength={100}
                   required
                   placeholder='Say something about this pin' 
                   className="_input-2">
