@@ -23,12 +23,16 @@ class GridImage extends Component {
 
   handleClose = () => this.setState({ modalOpen: false });
 
+  addDefaultSrc = (e) => {
+    e.target.src = require('../../assets/images/image-placeholder.png');
+  }
+
   render() {
     const images = this.props.images.map((image, i) => {
       return (
         <div key={i} className="_grid">
           <div className="_img-g" onClick={this.handleOpen}>
-            <Image className="_img" size="large" src={image.url} />
+            <Image onError={this.addDefaultSrc} className="_img" size="large" src={image.url} />
             <HoverContent image={image}/>
           </div>
           <span className="_b-dot">

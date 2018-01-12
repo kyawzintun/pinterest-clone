@@ -17,6 +17,10 @@ class SavePinModal extends Component {
     this.setState({isCreateBoard: !this.state.isCreateBoard });
   };
 
+  addDefaultSrc = (e) => {
+    e.target.src = require('../../assets/images/image-placeholder.png');
+  }
+
   render() {
     const isCreateBoard = this.state.isCreateBoard;
     return (
@@ -27,7 +31,7 @@ class SavePinModal extends Component {
               <Grid.Column className="_35 _2v pin-grid">
                 <Segment className="pin-segment _2v pin-img-wrap">
                   <div className="pin-img">
-                    <Image className="_img" size="large" src={this.props.image.url} />
+                    <Image onError={this.addDefaultSrc} className="_img" size="large" src={this.props.image.url} />
                   </div>
                   <div className="pin-meta">
                     <span>{this.props.image.description}</span>
