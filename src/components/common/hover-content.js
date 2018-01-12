@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Icon, Popup } from 'semantic-ui-react';
 
+import ViewImageModal from '../modal/view-image-modal';
 import SharePin from '../popup/share-pin-popup';
 import SavePinModal from '../modal/save-pin-modal';
 import './hover-content.css';
@@ -9,17 +10,30 @@ class HoverContent extends Component {
   constructor() {
     super();
     this.state = {
-      modalOpen: false
+      modalOpen: false,
+      viewImage: false,
     };
   }
 
-  handleOpen = () => this.setState({ modalOpen: true });
+  handleOpen = (e) => {
+    e.preventDefault();
+    this.setState({ modalOpen: true });
+  }
   
   handleClose = () => this.setState({ modalOpen: false });
 
+  openImageModal = (e) => {
+    e.preventDefault();
+    if (e.target === e.currentTarget) {
+      this.setState({ viewImage: true })
+    }
+  }
+
+  closeImageModal = () => this.setState({ viewImage: false });
+
   render() {
     return (
-      <div className="_hover-content">
+      <div className="_hover-content" onClick={this.openImageModal}>
         <div className="_btn-group">
           <Popup
             trigger={
@@ -38,6 +52,7 @@ class HoverContent extends Component {
         </div>
         <div className="_text">uploaded by {this.props.image.username}</div>
         <SavePinModal modalOpen={this.state.modalOpen} handleClose={this.handleClose} image={this.props.image}/>
+        <ViewImageModal handleClose={this.closeImageModal} modalOpen={this.state.viewImage} imageUrl={this.props.image.url}/>
       </div>
     );
   }

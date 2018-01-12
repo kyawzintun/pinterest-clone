@@ -3,7 +3,6 @@ import { Image, Popup } from 'semantic-ui-react';
 import sizeMe from 'react-sizeme';
 import StackGrid, { transitions, easings } from 'react-stack-grid';
 
-import ViewImageModal from '../modal/view-image-modal';
 import HoverContent from '../common/hover-content';
 import MoreInfoPopup from '../popup/more-info-popup';
 import InfoButton from '../button/info-button';
@@ -11,17 +10,6 @@ import "./grid.css";
 const transition = transitions.scaleDown;
 
 class GridImage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      modalOpen: false,
-      imgName: ''
-    };
-  }
-
-  handleOpen = () => this.setState({ modalOpen: true });
-
-  handleClose = () => this.setState({ modalOpen: false });
 
   addDefaultSrc = (e) => {
     e.target.src = require('../../assets/images/image-placeholder.png');
@@ -31,7 +19,7 @@ class GridImage extends Component {
     const images = this.props.images.map((image, i) => {
       return (
         <div key={i} className="_grid">
-          <div className="_img-g" onClick={this.handleOpen}>
+          <div className="_img-g">
             <Image onError={this.addDefaultSrc} className="_img" size="large" src={image.url} />
             <HoverContent image={image}/>
           </div>
@@ -44,7 +32,6 @@ class GridImage extends Component {
               className="_i-popup"
             />
           </span>
-          {/* <ViewImageModal modalOpen={this.state.modalOpen} handleClose={this.handleClose} /> */}
         </div>
       );
     });

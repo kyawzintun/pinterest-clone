@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Icon, Modal } from 'semantic-ui-react';
+import { Image, Modal } from 'semantic-ui-react';
 
 class ViewImageModal extends Component {
   render() {
@@ -11,7 +11,7 @@ class ViewImageModal extends Component {
         size='small'
         >
         <Modal.Content>
-          <Image className="_img" size="large" src={require(`../../assets/images/photos/1.jpg`)} />
+          <Image className="_img" size="large" src={this.props.imageUrl} />
         </Modal.Content>
       </Modal>
     );

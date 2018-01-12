@@ -19,7 +19,7 @@ class NavBar extends Component {
     const user = store.get('user');
     return (
       <Menu fixed='top' stackable className="custom-menu">
-        <Menu.Item>
+        <Menu.Item as='a' href="/explore">
           <Image size='mini' src={logo} style={{ marginRight: '1.5em' }} />
         </Menu.Item>
         <Menu.Item className="search-menu-item">

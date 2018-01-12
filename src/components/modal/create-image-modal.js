@@ -130,7 +130,7 @@ class CreateImageModal extends Component {
                 <input
                   onChange={this.handleChange}
                   name="website"
-                  value="pinterest.com"
+                  value={this.state.website}
                   minLength={6}
                   maxLength={50}
                   autoComplete='off'

@@ -37,7 +37,6 @@ class Profile extends Component {
       url: `${baseUrl}image/${user.id}/get`
     }).then(function (res) {
       _this.setState({ loading: false, images: res.data });
-      console.log('image get success ', res);
     }).catch(err => {
       _this.setState({ loading: false, images: [] });
       console.log('image get error ', err.response);
