@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { Form, Button } from 'semantic-ui-react';
 import isLoggedIn from '../helper/isLoggedIn';
 import FacebookButton from "../button/fb-button";
@@ -46,8 +46,8 @@ class Home extends Component {
                     <div className="div-id-9">
                       <span className="span-id-1">
                         <span>By continuing, you agree to Pinterest's  
-                          <a href="/" target="_blank"> Terms of Service</a>, 
-                          <a href="/" target="_blank"> Privacy Policy</a>
+                          <a as={Link} to='/' target="_blank"> Terms of Service</a>, 
+                          <a as={Link} to='/' target="_blank"> Privacy Policy</a>
                         </span>
                       </span>
                     </div>
@@ -55,7 +55,7 @@ class Home extends Component {
                 </div>
               </div>
 
-              <a href="/explore" className="home-link">
+              <a as={Link} to='/explore' className="home-link">
                 <button className="home-button" type="button">Home</button>
               </a>
 
