@@ -10,6 +10,7 @@ const Routes = (props) => (
       <Route exact path='/' component={Home} />
       <Route exact path='/explore' component={Explore} />
       <Route exact path='/:id/boards' component={Board} />
+      <Route component={Explore} />
     </Switch>
   </BrowserRouter>
 );
