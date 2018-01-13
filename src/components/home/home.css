@@ -125,16 +125,6 @@
   text-decoration: none !important;
 }
 
-.home-link {
-  display: block;
-}
-
-.home-link,
-.home-link:active,
-.home-link:visited {
-  text-decoration: none;
-}
-
 .home-button {
   border:0px;
   height:36px;
