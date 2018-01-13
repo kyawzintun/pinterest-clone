@@ -2,11 +2,14 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { withRouter } from 'react-router'
-import { Button, Icon } from 'semantic-ui-react';
 import axios from 'axios';
 import store from 'store';
 
+import "./social-button.css";
+import Facebook from '../../assets/images/facebook-logo.svg';
+
 const baseUrl = process.env.REACT_APP_API_URL;
+const FBAppID = process.env.REACT_APP_FACEBOOK_APP_ID;
 
 class FacebookButton extends Component {
   static propTypes = {
@@ -23,7 +26,7 @@ class FacebookButton extends Component {
   loadFBLoginApi = () => {
     window.fbAsyncInit = function () {
       FB.init({
-        appId: '1729399460438553',
+        appId: FBAppID,
         cookie: true,
         xfbml: true,
         version: 'v2.11'
@@ -92,9 +95,12 @@ class FacebookButton extends Component {
 
   render() {
     return (
-      <Button onClick={this.handleFBLogin} color='facebook' fluid>
-        <Icon name='facebook' /> Continue with Facebook
-      </Button>
+      // <Button onClick={this.handleFBLogin} color='facebook' fluid>
+      //   <Icon name='facebook' /> Continue with Facebook
+      // </Button>
+      <div onClick={this.handleFBLogin} className="facebook-button">
+        <img src={Facebook} alt="facebook logo" /> Continue with Facebook
+      </div>
     );
   }
 }

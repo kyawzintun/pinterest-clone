@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Form, Button, Icon } from 'semantic-ui-react';
+import { Form, Button } from 'semantic-ui-react';
 import isLoggedIn from '../helper/isLoggedIn';
 import FacebookButton from "../button/fb-button";
+// import GoogleButton from "../button/google-button";
 import logo from "../../assets/images/logo.svg"
 import "./home.css";
 
@@ -40,9 +41,7 @@ class Home extends Component {
                     <p className="p-or">OR</p>
                     <div className="div-id-8">
                       <FacebookButton />
-                      <Button onClick={this.handleFBLogout} color='google plus' fluid>
-                        <Icon name='google' /> Continue with Google
-                      </Button>
+                      {/* <GoogleButton /> */}
                     </div>
                     <div className="div-id-9">
                       <span className="span-id-1">

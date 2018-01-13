@@ -1,0 +1,14 @@
+.facebook-button {
+  width: 270px;
+  height: 38px;
+  line-height: 38px;
+  margin-bottom: 15px;
+  background: #324E88;
+  color: #fff;
+  cursor: pointer;
+}
+
+.facebook-button img {
+  float: left;
+  margin-top: 3px;
+}
