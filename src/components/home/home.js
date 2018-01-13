@@ -55,7 +55,7 @@ class Home extends Component {
                 </div>
               </div>
 
-              <a as={Link} to='/explore' className="home-link">
+              <a as={Link} to='/pinterest-clone/explore' className="home-link">
                 <button className="home-button" type="button">Home</button>
               </a>
 
