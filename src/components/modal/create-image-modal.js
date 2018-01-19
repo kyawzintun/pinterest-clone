@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Button, Modal, Form, Label } from 'semantic-ui-react'
+import RagePower from "rage-power";
 import axios from 'axios';
 import store from 'store';
 
@@ -144,16 +145,18 @@ class CreateImageModal extends Component {
               </Form.Field>
               <Form.Field>
                 <label className="color-555 f-size-16 l-height-18">Description</label>
-                <textarea 
-                  onChange={this.handleChange}
-                  name="description"
-                  value={this.state.description}
-                  minLength={5}
-                  maxLength={100}
-                  required
-                  placeholder='Say something about this pin' 
-                  className="_input-2">
-                </textarea>
+                <RagePower>
+                  <textarea 
+                    onChange={this.handleChange}
+                    name="description"
+                    value={this.state.description}
+                    minLength={5}
+                    maxLength={100}
+                    required
+                    placeholder='Say something about this pin' 
+                    className="_input-2">
+                  </textarea>
+                </RagePower>
                 {this.state.descriptionError &&
                   <Label basic color='red' pointing>{this.state.descriptionError}</Label>
                 }
